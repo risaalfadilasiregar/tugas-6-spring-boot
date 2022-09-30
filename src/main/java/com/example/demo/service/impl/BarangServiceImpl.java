@@ -4,6 +4,7 @@ import com.example.demo.entity.Barang;
 import com.example.demo.entity.dto.BarangDTO;
 import com.example.demo.entity.mapping.BarangMapping;
 import com.example.demo.repository.BarangRepository;
+import com.example.demo.repository.SupplierRepository;
 import com.example.demo.service.BarangService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,9 @@ import java.util.List;
 public class BarangServiceImpl implements BarangService {
     @Autowired
     private BarangRepository repository;
+
+    @Autowired
+    private SupplierRepository supplierRepository;
 
     @Override
     public BarangDTO save(BarangDTO param) {
